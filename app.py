@@ -70,6 +70,16 @@ st.dataframe(summary_display)
 summary = summarize_by_client(df)
 
 
+# Генеруємо Excel
+excel_data = to_excel(df)
+
+# Кнопка завантаження
+st.download_button(
+    label="Скачати Excel",
+    data=excel_data,
+    file_name="fish_history.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
 
 
 # --- Records Edit ---
