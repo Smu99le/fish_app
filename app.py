@@ -79,7 +79,8 @@ def to_excel(df):
     return processed_data
 
 # Генеруємо Excel
-excel_data = to_excel(df)
+if not df.empty:
+    excel_data = to_excel(df)
 
 # Кнопка завантаження
 st.download_button(
