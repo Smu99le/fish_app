@@ -68,16 +68,7 @@ summary_display = summary.rename(columns={
 
 st.subheader("Підсумок по клієнтах")
 st.dataframe(summary_display)
-
 summary = summarize_by_client(df)
-
-# Функція для конвертації в Excel
-def to_excel(df):
-    output = BytesIO()
-    with pd.ExcelWriter(output, engine="openpyxl") as writer:
-        df.to_excel(writer, index=False, sheet_name="Sheet1")
-    processed_data = output.getvalue()
-    return processed_data
 
 # Генеруємо Excel
 if not df.empty:
