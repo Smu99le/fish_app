@@ -82,13 +82,12 @@ def to_excel(df):
 if not df.empty:
     excel_data = to_excel(df)
 
-# Кнопка завантаження
-st.download_button(
-    label="Скачати Excel",
-    data=excel_data,
-    file_name="fish_history.xlsx",
-    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-)
+    st.download_button(
+        label="Скачати в Excel",
+        data=excel_data,
+        file_name="fish_history.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
 
 
 # --- Records Edit ---
