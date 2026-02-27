@@ -6,6 +6,7 @@ from database.schema import create_tables
 from database.repository import insert_fish, fetch_history, update_fish
 from services.fish_service import calculate_total
 from services.report_service import summarize_by_client
+from services.Export_to_excel import to_excel
 from io import BytesIO
 
 # --- Init ---
